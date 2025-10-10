@@ -75,7 +75,7 @@ main{
 }
 .calc-numbers{
     margin: 0.3rem;    
-    flex: 5;
+    flex: 3;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(3,1fr);
@@ -92,6 +92,12 @@ main{
     color: aliceblue;
     text-align: center;
     align-content: center;
+    transition: transform 0.2s ease-in-out;
+}
+.calc-item:hover, .calc-operator:hover {
+  transform: scale(0.9);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
 footer{
