@@ -26,6 +26,11 @@ calcNumbers.addEventListener('click',(e)=> {
                 output.value = newOutput.slice(1, newOutput.length);
             }else {output.value = `-${newOutput}`;}
         }
+
+        if(e.target.id === 'mod'){
+            const newOutput = output.value.slice(0, output.value.length-1);            
+            output.value = (Number(newOutput) / 100 );
+        }
         
     }
 })
