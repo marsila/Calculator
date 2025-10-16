@@ -1,15 +1,13 @@
+//TODO 1 :Implementing negative values
+
 const output = document.querySelector("#output");
 
-
 const calcNumbers = document.querySelector(".calc-numbers");
-console.log(calcNumbers);
 
 const calcOperators = document.querySelector(".calc-operators");
-console.log(calcOperators);
 
 calcNumbers.addEventListener('click',(e)=> {
-    if(e.target.className === "calc-item"){        
-        //output.value += e.target.textContent;
+    if(e.target.className === "calc-item"){ 
         appendToOutput(e.target.textContent);
         
         if (e.target.id ==='clear-all'){
@@ -42,7 +40,7 @@ calcOperators.addEventListener('click', (e) => {
 function calculateResult(expression) {    
   try {
     const result = new Function(`return  ${expression}`)();
-    
+
     if (isNaN(result) || !isFinite(result)) {
             output.value = 'Error';                
     } else {
